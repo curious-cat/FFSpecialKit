@@ -6,7 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FFSpeciaKit.h"
 
 @interface Target_Special : NSObject
+
+- (UIViewController*)Action_specialDetailViewController:(NSDictionary*)params;
+
+- (NSDictionary*)Action_specialReformerWithOriginData:(NSDictionary*)params;
+
+- (NSDictionary *)Action_specialReformer:(NSDictionary*)params;
+
+- (APIRequest*)Action_specialAPIRequest:(NSDictionary*)params;
+
 
 @end

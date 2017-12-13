@@ -7,7 +7,7 @@
 //
 
 #import "FFSpecialCellBottomView.h"
-#import "public.h"
+#import "FFSpeciaKit.h"
 
 @implementation FFSpecialCellBottomView
 

@@ -7,13 +7,13 @@
 //
 
 #import "FFSpecialController.h"
-#import "public.h"
+#import "FFSpeciaKit.h"
 #import "SpecialAPIRequest.h"
 #import "FFSpecialListReformer.h"
 /// view
 #import "FFMainView.h"
 #import "FFSpecialCell.h"
-#import "FFAuthorDetailController.h"
+//#import "FFAuthorDetailController.h"
 #import "FFSpecialDetailController.h"
 
 @interface FFSpecialController ()<APIResponseProtocol,FFCellProtocol>
@@ -43,8 +43,8 @@
 }
 
 - (void)cellHeaderIconDidClick:(NSIndexPath *)indexPath params:(NSDictionary *)params {
-    UIViewController *controller = [[FFAuthorDetailController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+//    UIViewController *controller = [[FFAuthorDetailController alloc] init];
+//    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)cellDidClick:(NSIndexPath *)indexPath params:(NSDictionary *)params {

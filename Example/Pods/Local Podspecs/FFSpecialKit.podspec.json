@@ -18,5 +18,34 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "FFSpecialKit/Classes/**/*"
+  "source_files": "FFSpecialKit/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "YYWebImage": [
+
+    ],
+    "ReactiveCocoa": [
+      "~> 2.5"
+    ],
+    "FFCategoryKit": [
+
+    ],
+    "FFAPIsKit": [
+
+    ],
+    "FFReformerKeysKit": [
+
+    ],
+    "FFToolsKit": [
+
+    ],
+    "FFConfigsKit": [
+
+    ],
+    "FFMainViewKit": [
+
+    ]
+  }
 }
