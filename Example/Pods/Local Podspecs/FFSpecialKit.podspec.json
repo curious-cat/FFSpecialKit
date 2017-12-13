@@ -1,0 +1,22 @@
+{
+  "name": "FFSpecialKit",
+  "version": "2.5",
+  "summary": "业务组件",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/curious-cat/FFSpecialKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "842373586@qq.com": "842373586@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/curious-cat/FFSpecialKit.git",
+    "tag": "2.5"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FFSpecialKit/Classes/**/*"
+}
