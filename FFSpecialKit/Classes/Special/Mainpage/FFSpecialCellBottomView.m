@@ -69,6 +69,8 @@
 - (UIButton *)createBtn:(NSString *)imageName{
    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    
     [btn title:nil titleColor:kHexColor_555 image:imageName backgroundColor:nil fontSize:FONT_SIZE_12 target:nil action:nil];
     [btn sizeToFit];
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -FFButtonTitleImageMargin);

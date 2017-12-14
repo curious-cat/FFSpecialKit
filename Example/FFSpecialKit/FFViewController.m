@@ -7,7 +7,8 @@
 //
 
 #import "FFViewController.h"
-
+#import <FFSpecialKit/FFSpecialKit.h>
+#import "FFSpecialController.h"
 @interface FFViewController ()
 
 @end
@@ -17,8 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
 }
+
+
+- (IBAction)specialVC:(id)sender {
+    
+    FFSpecialController *specialVC =  [[FFSpecialController alloc] init];
+    [self.navigationController pushViewController:specialVC animated:YES];
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

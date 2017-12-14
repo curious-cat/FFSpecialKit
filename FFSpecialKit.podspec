@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FFSpecialKit'
-  s.version          = '3.0'
+  s.version          = '4.6'
   s.summary          = '业务组件'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'FFSpecialKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'FFSpecialKit' => ['FFSpecialKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'FFSpecialKit' => ['FFSpecialKit/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -47,5 +47,6 @@ TODO: Add long description of the pod here.
     s.dependency 'FFToolsKit'
     s.dependency 'FFConfigsKit'
     s.dependency 'FFMainViewKit'
+    s.dependency 'FFAuthorKit_Category'
 
 end

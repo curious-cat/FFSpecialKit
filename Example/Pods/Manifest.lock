@@ -14,15 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CTMediator (12)
   - FFAPIsKit (2.5):
     - AFNetworking
     - FFToolsKit
+  - FFAuthorKit_Category (3.0):
+    - CTMediator
+    - FFAPIsKit
   - FFCategoryKit (2.5)
   - FFConfigsKit (2.5)
   - FFMainViewKit (2.5)
   - FFReformerKeysKit (2.5)
-  - FFSpecialKit (2.5):
+  - FFSpecialKit (4.6):
     - FFAPIsKit
+    - FFAuthorKit_Category
     - FFCategoryKit
     - FFConfigsKit
     - FFMainViewKit
@@ -63,12 +68,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CTMediator: 83043d198b7ea73214d53375adfdd7f60edd4c1a
   FFAPIsKit: 828829adc3002ed8c69b6ea9adebfcd6802a6fe4
+  FFAuthorKit_Category: f0dbd9b23f6d73f53bdd46fdf4ff86076f8d4882
   FFCategoryKit: 504e692b8f781814f72bd8966f570b46a4445ef8
   FFConfigsKit: 12c51c2be4589d0336cdf2c985d7cdbe1275dfb0
   FFMainViewKit: 8ae4acef22ed637461e7ddc7f773a1f3789a6391
   FFReformerKeysKit: 761c6fd317de1df26b7dfa5dfa809beeb346497f
-  FFSpecialKit: de5d63e063a501711d477de1d10644be9bfebf2e
+  FFSpecialKit: e2fff8d4e433fe77d4f9f2f3cbc1cc10f64fb559
   FFToolsKit: 94a6d5cc1c3c4a0634437045a8485b330e9f0db1
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

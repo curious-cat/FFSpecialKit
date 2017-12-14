@@ -11,6 +11,8 @@
 #import "FFSpecialCellBottomView.h"
 #import "FFSpecialListReformerKeys.h"
 #import "FFAuthorListReformerKeys.h"
+#import "UIImage+Special.h"
+#import "CTMediator+Author.h"
 //#import "FFAuthorListReformer.h"
 
 @interface FFSpecialCell ()
@@ -143,36 +145,42 @@
 - (void)handleData {
     
     @weakify(self)
-//    [RACObserve(self, dataDict) subscribeNext:^(NSDictionary *data) {
-//        @strongify(self)
-//    
+    [RACObserve(self, dataDict) subscribeNext:^(NSDictionary *data) {
+        @strongify(self)
+
 //        FFAuthorListReformer *reformer = [[FFAuthorListReformer alloc] init];
 //        NSDictionary *author = [reformer reformData:data[kAuthorReformer]];
-//        [self.pictureView yy_setImageWithURL:data[kSpecialPropertyListKeyPictureURL] placeholder:[UIImage imageNamed:@"placehodler"]];
-//        [self.headImgView yy_setImageWithURL:author[kAuthorPropertyListHeaderURL] placeholder:[UIImage imageNamed:@"pc_default_avatar"]];
-//        self.identityLabel.text = data[kSpecialPropertyListKeyAuthorIdentity];
-//        self.categoryLabel.text = data[kSpecialPropertyListKeyCategoryName];
-//        self.authorLabel.text = author[kAuthorPropertyListKeyName];
-//        self.titleLabel.text = data[kSpecialPropertyListKeyTitle];
-//        self.descLabel.text = data[kSpecialPropertyListKeyDesc];
-//        if (author[kAuthorPropertyListKeyAuthIcon]) {
-//            self.authImgView.image = author[kAuthorPropertyListKeyAuthIcon];
-//        }
-//        [self.bottomView.readBtn setTitle:data[kSpecialPropertyListKeyRead] forState:UIControlStateNormal];
-//        [self.bottomView.followBtn setTitle:data[kSpecialPropertyListKeyFollowNum] forState:UIControlStateNormal];
-//        [self.bottomView.commentBtn setTitle:data[kSpecialPropertyListKeyCommentNum] forState:UIControlStateNormal];
-//        
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
-//        [self.headImgView addGestureRecognizer:tap];
-//        @weakify(self)
-//        [[tap rac_gestureSignal] subscribeNext:^(id x) {
-//            @strongify(self)
-//            if ([self.delegate respondsToSelector:@selector(cellHeaderIconDidClick:params:)]) {
-//                [self.delegate cellHeaderIconDidClick:self.indexPath params:nil];
-//            }
-//        }];;
-//    }];
-//    
+        
+        CTMediator *mediator = [CTMediator sharedInstance];
+        
+        NSDictionary *author = [mediator authorReformerWithOriginData:data[kAuthorReformer]];
+        
+        
+        [self.pictureView yy_setImageWithURL:data[kSpecialPropertyListKeyPictureURL] placeholder:[UIImage imageNamed:@"placehodler"]];
+        [self.headImgView yy_setImageWithURL:author[kAuthorPropertyListHeaderURL] placeholder:[UIImage imageNamed:@"pc_default_avatar"]];
+        self.identityLabel.text = data[kSpecialPropertyListKeyAuthorIdentity];
+        self.categoryLabel.text = data[kSpecialPropertyListKeyCategoryName];
+        self.authorLabel.text = author[kAuthorPropertyListKeyName];
+        self.titleLabel.text = data[kSpecialPropertyListKeyTitle];
+        self.descLabel.text = data[kSpecialPropertyListKeyDesc];
+        if (author[kAuthorPropertyListKeyAuthIcon]) {
+            self.authImgView.image = author[kAuthorPropertyListKeyAuthIcon];
+        }
+        [self.bottomView.readBtn setTitle:data[kSpecialPropertyListKeyRead] forState:UIControlStateNormal];
+        [self.bottomView.followBtn setTitle:data[kSpecialPropertyListKeyFollowNum] forState:UIControlStateNormal];
+        [self.bottomView.commentBtn setTitle:data[kSpecialPropertyListKeyCommentNum] forState:UIControlStateNormal];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        [self.headImgView addGestureRecognizer:tap];
+        @weakify(self)
+        [[tap rac_gestureSignal] subscribeNext:^(id x) {
+            @strongify(self)
+            if ([self.delegate respondsToSelector:@selector(cellHeaderIconDidClick:params:)]) {
+                [self.delegate cellHeaderIconDidClick:self.indexPath params:nil];
+            }
+        }];;
+    }];
+    
 }
 
 #pragma mark - getter
@@ -254,8 +262,11 @@
 }
 
 - (UIImageView *)underlineImgView{
+    
     if (_underlineImgView == nil) {
-        _underlineImgView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"underLine"]];
+        
+        UIImage *image = [UIImage ff_imagePathWithName:@"underLine" bundle:@"FFSpecialKit" targetClass:[self class]];
+        _underlineImgView = [[UIImageView alloc]initWithImage:image];
         _underlineImgView.backgroundColor = [UIColor greenColor];
     }
     return _underlineImgView;

@@ -13,8 +13,8 @@
 /// view
 #import "FFMainView.h"
 #import "FFSpecialCell.h"
-//#import "FFAuthorDetailController.h"
 #import "FFSpecialDetailController.h"
+#import "CTMediator+Author.h"
 
 @interface FFSpecialController ()<APIResponseProtocol,FFCellProtocol>
 
@@ -43,8 +43,11 @@
 }
 
 - (void)cellHeaderIconDidClick:(NSIndexPath *)indexPath params:(NSDictionary *)params {
-//    UIViewController *controller = [[FFAuthorDetailController alloc] init];
-//    [self.navigationController pushViewController:controller animated:YES];
+    
+    CTMediator *mediator = [CTMediator sharedInstance];
+    UIViewController *authorVC = [mediator authorDetailViewController];
+ 
+    [self.navigationController pushViewController:authorVC animated:YES];
 }
 
 - (void)cellDidClick:(NSIndexPath *)indexPath params:(NSDictionary *)params {
