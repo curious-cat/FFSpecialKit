@@ -7,7 +7,7 @@
 //
 
 #import "FFSpecialCell.h"
-#import "FFSpeciaKit.h"
+#import "FFSpecialKit.h"
 #import "FFSpecialCellBottomView.h"
 #import "FFSpecialListReformerKeys.h"
 #import "FFAuthorListReformerKeys.h"

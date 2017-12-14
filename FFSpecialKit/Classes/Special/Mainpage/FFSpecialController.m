@@ -7,7 +7,7 @@
 //
 
 #import "FFSpecialController.h"
-#import "FFSpeciaKit.h"
+#import "FFSpecialKit.h"
 #import "SpecialAPIRequest.h"
 #import "FFSpecialListReformer.h"
 /// view

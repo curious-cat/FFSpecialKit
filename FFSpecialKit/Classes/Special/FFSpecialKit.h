@@ -1,12 +1,12 @@
 //
-//  FFSpeciaKit.h
+//  FFSpecialKit.h
 //  FFSpecialKit
 //
-//  Created by curious_cat on 2017/12/13.
+//  Created by curious_cat on 2017/12/14.
 //
 
-#ifndef FFSpeciaKit_h
-#define FFSpeciaKit_h
+#ifndef FFSpecialKit_h
+#define FFSpecialKit_h
 
 #import <FFAPIsKit/FFAPIsKit-umbrella.h>
 #import <FFCategoryKit/FFCategoryKit-umbrella.h>
@@ -16,7 +16,6 @@
 #import <Masonry/Masonry.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <YYWebImage/YYWebImage.h>
+#import <FFReformerKeysKit/FFReformerKeysKit-umbrella.h>
 
-
-
-#endif /* FFSpeciaKit_h */
+#endif /* FFSpecialKit_h */

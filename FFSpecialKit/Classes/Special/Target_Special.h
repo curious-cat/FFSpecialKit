@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FFSpeciaKit.h"
+#import "FFSpecialKit.h"
 
 @interface Target_Special : NSObject
 
